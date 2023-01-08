@@ -38,8 +38,8 @@ private final XboxController m_controller2 = new XboxController(1);
     m_drivetrainSubsystem.setDefaultCommand(new DefaultDriveCommand(
             m_drivetrainSubsystem,
             () -> -modifyAxis(m_controller.getLeftY()) * DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND * Constants.TRAINING_WHEELS,
-            () -> -modifyAxis(m_controller.getRightX()) * DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND * Constants.TRAINING_WHEELS,
-            () -> -modifyAxis(m_controller2.getLeftY()) * DrivetrainSubsystem.MAX_ANGULAR_VELOCITY_RADIANS_PER_SECOND * Constants.TRAINING_WHEELS
+            () -> -modifyAxis(m_controller.getLeftX()) * DrivetrainSubsystem.MAX_VELOCITY_METERS_PER_SECOND * Constants.TRAINING_WHEELS,
+            () -> -modifyAxis(m_controller.getRightX()) * DrivetrainSubsystem.MAX_ANGULAR_VELOCITY_RADIANS_PER_SECOND * Constants.TRAINING_WHEELS
     ));
 
     // Configure the button bindings
